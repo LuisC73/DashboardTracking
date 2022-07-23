@@ -1,0 +1,23 @@
+@use '../_layout/vars' as vars;
+@use '../_layout/mixins' as mixin;
+
+body{
+    font-family: vars.$font;
+    overflow-x: hidden;
+    font-size: 18px;
+    background-color: map-get(vars.$blues, "veryDark" );
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 5rem 2.5rem;
+
+    @include mixin.mediaMovil(){
+        place-items: initial;
+        padding: 4rem 2rem;
+    }
+}
+
+
+.attribution { font-size: 11px; text-align: center; margin-top: 4rem; color: vars.$white;}
+.attribution a { color: hsl(228, 45%, 44%); }

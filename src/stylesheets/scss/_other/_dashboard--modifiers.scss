@@ -1,0 +1,43 @@
+@use '../_layout/vars' as vars;
+@use '../_layout/mixins' as mixin;
+
+.dashboard{
+
+    &__button--active{
+        color: vars.$white;
+    }
+
+    &__p--title{
+        color: vars.$white;
+        font-size: 1rem;
+    }
+
+    &__h3--hour{
+        font-size: 2.4rem;
+    }
+
+    &__p--previous{
+        color: vars.$white;
+        margin-top: .8rem;
+    }
+
+    &__bg--play{
+        background-color: map-get(vars.$blues, "play" );
+    }
+
+    &__bg--study{
+        background-color: map-get(vars.$reds, "study" );
+    }
+
+    &__bg--exercise{
+        background-color: vars.$green;
+    }
+
+    &__bg--social{
+        background-color: vars.$violet;
+    }
+
+    &__bg--self{
+        background-color: vars.$orange;
+    }
+}

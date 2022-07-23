@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./src/stylesheets/css/style.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <main class="main">
+    <div class="dashboard">
+      <div class="dashboard__main">
+        <div class="dashboard__top">
+          <img src="./src/images/image-jeremy.png" alt="profile" class="dashboard__profile">
+          <div class="dashboard__text">
+            <p class="dashboard__p">Report for</p>
+            <h3 class="dashboard__h3">Jeremy Robson</h3>
+          </div>   
+        </div>
+        <div class="dashboard__bottom">
+          <button class="dashboard__button" data-option="daily">Daily</button>
+          <button class="dashboard__button dashboard__button--active" data-option="weekly">Weekly</button>
+          <button class="dashboard__button" data-option="monthly">Monthly</button>
+        </div>
+      </div>
+      <div class="dashboard__card">
+        <div class="dashboard__bg">
+          <img src="./src/images/icon-work.svg" alt="" class="dashboard__img">
+        </div>
+        <div class="dashboard__info">
+          <div class="dashboard__name">
+            <p class="dashboard__p dashboard__p--title">Work</p>
+            <img src="./src/images/icon-ellipsis.svg" alt="icon" class="dashboard__select">
+          </div>
+          <h3 class="dashboard__h3 dashboard__h3--hour dashboard__daily" >5hrs</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastDaily">7hrs</span></p>
+          <!-- <h3 class="dashboard__h3 dashboard__h3--hour dashboard__weekly" >32hrs</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastWeekly">36hrs</span></p>
+          <h3 class="dashboard__h3 dashboard__h3--hour dashboard__monthly" >103hrs</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastMonthly">128hrs</span></p> -->
+        </div>
+      </div>
+      <div class="dashboard__card">
+        <div class="dashboard__bg dashboard__bg--play">
+          <img src="./src/images/icon-play.svg" alt="" class="dashboard__img">
+        </div>
+        <div class="dashboard__info">
+          <div class="dashboard__name">
+            <p class="dashboard__p dashboard__p--title">Play</p>
+            <img src="./src/images/icon-ellipsis.svg" alt="icon" class="dashboard__select">
+          </div>
+          <h3 class="dashboard__h3 dashboard__h3--hour dashboard__daily" >1hr</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastDaily">2hrs</span></p>
+          <!-- <h3 class="dashboard__h3 dashboard__h3--hour dashboard__weekly" >10hrs</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastWeekly">8hrs</span></p>
+          <h3 class="dashboard__h3 dashboard__h3--hour dashboard__monthly" >23hrs</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastMonthly">29hrs</span></p> -->
+        </div>
+      </div>
+      <div class="dashboard__card">
+        <div class="dashboard__bg dashboard__bg--study">
+          <img src="./src/images/icon-study.svg" alt="" class="dashboard__img">
+        </div>
+        <div class="dashboard__info">
+          <div class="dashboard__name">
+            <p class="dashboard__p dashboard__p--title">Study</p>
+            <img src="./src/images/icon-ellipsis.svg" alt="icon" class="dashboard__select">
+          </div>
+          <h3 class="dashboard__h3 dashboard__h3--hour dashboard__daily" >0hrs</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastDaily">1hr</span></p>
+          <!-- <h3 class="dashboard__h3 dashboard__h3--hour dashboard__weekly" >4hrs</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastWeekly">7hrs</span></p>
+          <h3 class="dashboard__h3 dashboard__h3--hour dashboard__monthly" >13hrs</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastMonthly">19hrs</span></p> -->
+        </div>
+      </div>
+      <div class="dashboard__card">
+        <div class="dashboard__bg dashboard__bg--exercise">
+          <img src="./src/images/icon-exercise.svg" alt="" class="dashboard__img">
+        </div>
+        <div class="dashboard__info">
+          <div class="dashboard__name">
+            <p class="dashboard__p dashboard__p--title">Exercise</p>
+            <img src="./src/images/icon-ellipsis.svg" alt="icon" class="dashboard__select">
+          </div>        
+          <h3 class="dashboard__h3 dashboard__h3--hour dashboard__daily" >1hr</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastDaily">1hr</span></p>
+          <!-- <h3 class="dashboard__h3 dashboard__h3--hour dashboard__weekly" >4hrs</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastWeekly">5hrs</span></p>
+          <h3 class="dashboard__h3 dashboard__h3--hour dashboard__monthly" >11hrs</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastMonthly">18hrs</span></p> -->
+        </div>
+      </div>
+      <div class="dashboard__card">
+        <div class="dashboard__bg dashboard__bg--social">
+          <img src="./src/images/icon-social.svg" alt="" class="dashboard__img">
+        </div>
+        <div class="dashboard__info">
+          <div class="dashboard__name">
+            <p class="dashboard__p dashboard__p--title">Social</p>
+            <img src="./src/images/icon-ellipsis.svg" alt="icon" class="dashboard__select">
+          </div>   
+          <h3 class="dashboard__h3 dashboard__h3--hour dashboard__daily" >1hr</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastDaily">3hrs</span></p>
+          <!-- <h3 class="dashboard__h3 dashboard__h3--hour dashboard__weekly" >5hrs</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastWeekly">10hrs</span></p>
+          <h3 class="dashboard__h3 dashboard__h3--hour dashboard__monthly" >21hrs</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastMonthly">23hrs</span></p> -->
+        </div>
+      </div>
+      <div class="dashboard__card">
+        <div class="dashboard__bg dashboard__bg--self">
+          <img src="./src/images/icon-self-care.svg" alt="" class="dashboard__img">
+        </div>
+        <div class="dashboard__info">
+          <div class="dashboard__name">
+            <p class="dashboard__p dashboard__p--title">Self Care</p>
+            <img src="./src/images/icon-ellipsis.svg" alt="icon" class="dashboard__select">
+          </div>   
+          <h3 class="dashboard__h3 dashboard__h3--hour dashboard__daily" >0hrs</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastDaily">1hr</span></p>
+          <!-- <h3 class="dashboard__h3 dashboard__h3--hour dashboard__weekly" >2hrs</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastWeekly">2hrs</span></p>
+          <h3 class="dashboard__h3 dashboard__h3--hour dashboard__monthly" >7hrs</h3>
+          <p class="dashboard__p dashboard__p--previous">Last Week - <span class="dashboard__lastMonthly">11hrs</span></p> -->
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Luis Miguel Castro Curequia</a>
+  </div>
+</body>
+</html>

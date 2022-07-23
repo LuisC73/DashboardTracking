@@ -1,0 +1,169 @@
+@use '../_layout/vars' as vars;
+@use '../_layout/mixins' as mixin;
+
+.dashboard{
+   width: 100%;
+   height: auto;
+   @include mixin.grid(4,1fr,1.6rem);
+   grid-template-areas: 
+   "main work play study"
+   "main exercise social self";
+
+   @include mixin.mediaMovil(){
+      @include mixin.grid(1,1fr,2rem);
+
+      grid-template-areas: 
+      "main"
+      "work"
+      "exercise"
+      "social"
+      "self";
+   }
+
+   &__main{
+    grid-area: main;
+    border-radius: .9rem;
+    background-color: map-get(vars.$blues,"dark"); 
+   }
+
+   &__top{
+    background-color: map-get(vars.$blues,"blue");
+    color: vars.$white;
+    width: 100%;
+    border-radius: .9rem;
+    padding: 2.2rem 1rem;
+    @include mixin.flex(space-evenly,flex-start,column);
+
+    @include mixin.mediaMovil(){  
+      @include mixin.flex(center,center,row);
+      width: 100%;
+      gap: 1.7rem;
+    }
+   }
+
+   &__profile{
+    width: 4.5rem;
+    border: .2rem solid vars.$white;
+    border-radius: 50%;
+
+    @include mixin.mediaMovil(){width: 4rem;}
+   }
+
+   &__text{
+      padding: 2rem 0;
+      width: 80%;
+      @include mixin.mediaMovil(){padding: 1rem 0; width: 100%;}
+   }
+
+   &__p{
+      font-size: .7rem;
+      color: vars.$text;
+   }
+
+   &__h3{
+      font-size: 1.8rem;
+      margin-top: .5rem;
+      font-weight: 300;
+      @include mixin.mediaMovil(){  font-size: 1.2rem }
+   }
+
+   &__bottom{
+    background-color: map-get(vars.$blues,"dark");
+    width: 100%;
+    border-radius: 0 0 .9rem .9rem;
+    padding: 2rem 1rem;
+
+    @include mixin.mediaMovil(){  
+      @include mixin.flex(space-between,center,row);
+      width: 100%;
+      margin-top: 1rem;
+      padding: .5rem 2rem 1rem 2rem;
+    }
+   }
+
+   &__button{
+      font-size: .8rem;
+      color: vars.$text;
+      cursor: pointer;
+      transition: .3s;
+
+      &:hover{
+        color: vars.$white;
+      }
+
+      &:not(:first-child){
+         margin-top: 1rem;
+      }
+
+      @include mixin.mediaMovil(){  
+        &:not(:first-child){
+          margin-top: 0rem;
+       }
+      }
+   }
+
+   &__card{
+    color: vars.$white;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: 2.6rem 1fr;
+    overflow: hidden;
+    background: linear-gradient(180deg,map-get(vars.$reds, "work" ) 0%,map-get(vars.$reds, "work" ) 40%,map-get(vars.$blues,"dark") 100%);
+
+    &:nth-child(3){
+      background: linear-gradient(180deg,map-get(vars.$blues, "play" ) 0%,map-get(vars.$blues, "play" ) 40%,map-get(vars.$blues,"dark") 100%);
+    }
+
+    &:nth-child(4){
+      background: linear-gradient(180deg,map-get(vars.$reds, "study" ) 0%,map-get(vars.$reds, "study" ) 40%,map-get(vars.$blues,"dark") 100%);
+    }
+
+    &:nth-child(5){
+      background: linear-gradient(180deg,vars.$green 0%,vars.$green 40%,map-get(vars.$blues,"dark") 100%);
+    }
+
+    &:nth-child(6){
+      background: linear-gradient(180deg,vars.$violet 0%,vars.$violet 40%,map-get(vars.$blues,"dark") 100%);
+    }
+
+    &:nth-child(7){
+      background: linear-gradient(180deg,vars.$orange 0%,vars.$orange 40%,map-get(vars.$blues,"dark") 100%);
+    }
+   }
+
+   &__bg{
+      width: 100%;
+      background-color: map-get(vars.$reds, "work" );
+      border-radius: 1rem 1rem 0 0;
+   }
+
+   &__info{
+    padding: .8rem 1rem;
+    background-color: map-get(vars.$blues,"dark");
+    z-index: 1;
+    transition: .3s;
+    cursor: pointer;
+    border-radius: 1rem;
+
+    &:hover{
+      background-color: map-get(vars.$blues,"desaturated");
+    }
+   }
+
+   &__name{
+    @include mixin.flex(space-between,center,row);
+    padding: 1rem 0;
+   }
+
+   &__img{
+    width: 4rem;
+    z-index: -1;
+    margin-left: auto;
+   }
+
+   &__select{
+    width: 1rem;
+    cursor: pointer;
+   }
+
+}

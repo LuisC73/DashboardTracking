@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+body {
+  font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+  font-size: 18px;
+  background-color: hsl(224deg, 46%, 9%);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 5rem 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  body {
+    place-items: initial;
+    padding: 4rem 2rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 4rem;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+a {
+  display: block;
+}
+
+p a {
+  display: inline;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+::selection {
+  background-color: hsl(145deg, 58%, 55%);
+  color: #fff;
+}
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  display: block;
+  color: inherit;
+}
+
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: hsl(145deg, 58%, 55%);
+  border-radius: 10px;
+}
+
+.dashboard {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+  grid-template-areas: "main work play study" "main exercise social self";
+}
+@media screen and (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    grid-template-areas: "main" "work" "exercise" "social" "self";
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+.dashboard__main {
+  grid-area: main;
+  border-radius: 0.9rem;
+  background-color: hsl(235deg, 46%, 20%);
+}
+.dashboard__top {
+  background-color: hsl(246deg, 80%, 60%);
+  color: hsl(0deg, 0%, 100%);
+  width: 100%;
+  border-radius: 0.9rem;
+  padding: 2.2rem 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .dashboard__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 1.7rem;
+  }
+}
+.dashboard__profile {
+  width: 4.5rem;
+  border: 0.2rem solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  .dashboard__profile {
+    width: 4rem;
+  }
+}
+.dashboard__text {
+  padding: 2rem 0;
+  width: 80%;
+}
+@media screen and (max-width: 768px) {
+  .dashboard__text {
+    padding: 1rem 0;
+    width: 100%;
+  }
+}
+.dashboard__p {
+  font-size: 0.7rem;
+  color: hsl(237deg, 18%, 59%);
+}
+.dashboard__h3 {
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+  font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+  .dashboard__h3 {
+    font-size: 1.2rem;
+  }
+}
+.dashboard__bottom {
+  background-color: hsl(235deg, 46%, 20%);
+  width: 100%;
+  border-radius: 0 0 0.9rem 0.9rem;
+  padding: 2rem 1rem;
+}
+@media screen and (max-width: 768px) {
+  .dashboard__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.5rem 2rem 1rem 2rem;
+  }
+}
+.dashboard__button {
+  font-size: 0.8rem;
+  color: hsl(237deg, 18%, 59%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.dashboard__button:hover {
+  color: hsl(0deg, 0%, 100%);
+}
+.dashboard__button:not(:first-child) {
+  margin-top: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .dashboard__button:not(:first-child) {
+    margin-top: 0rem;
+  }
+}
+.dashboard__card {
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: 2.6rem 1fr;
+  overflow: hidden;
+  background: linear-gradient(180deg, hsl(15deg, 100%, 70%) 0%, hsl(15deg, 100%, 70%) 40%, hsl(235deg, 46%, 20%) 100%);
+}
+.dashboard__card:nth-child(3) {
+  background: linear-gradient(180deg, hsl(195deg, 74%, 62%) 0%, hsl(195deg, 74%, 62%) 40%, hsl(235deg, 46%, 20%) 100%);
+}
+.dashboard__card:nth-child(4) {
+  background: linear-gradient(180deg, hsl(348deg, 100%, 68%) 0%, hsl(348deg, 100%, 68%) 40%, hsl(235deg, 46%, 20%) 100%);
+}
+.dashboard__card:nth-child(5) {
+  background: linear-gradient(180deg, hsl(145deg, 58%, 55%) 0%, hsl(145deg, 58%, 55%) 40%, hsl(235deg, 46%, 20%) 100%);
+}
+.dashboard__card:nth-child(6) {
+  background: linear-gradient(180deg, hsl(264deg, 64%, 52%) 0%, hsl(264deg, 64%, 52%) 40%, hsl(235deg, 46%, 20%) 100%);
+}
+.dashboard__card:nth-child(7) {
+  background: linear-gradient(180deg, hsl(43deg, 84%, 65%) 0%, hsl(43deg, 84%, 65%) 40%, hsl(235deg, 46%, 20%) 100%);
+}
+.dashboard__bg {
+  width: 100%;
+  background-color: hsl(15deg, 100%, 70%);
+  border-radius: 1rem 1rem 0 0;
+}
+.dashboard__info {
+  padding: 0.8rem 1rem;
+  background-color: hsl(235deg, 46%, 20%);
+  z-index: 1;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+.dashboard__info:hover {
+  background-color: hsl(235deg, 45%, 61%);
+}
+.dashboard__name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 1rem 0;
+}
+.dashboard__img {
+  width: 4rem;
+  z-index: -1;
+  margin-left: auto;
+}
+.dashboard__select {
+  width: 1rem;
+  cursor: pointer;
+}
+
+.dashboard__button--active {
+  color: hsl(0deg, 0%, 100%);
+}
+.dashboard__p--title {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1rem;
+}
+.dashboard__h3--hour {
+  font-size: 2.4rem;
+}
+.dashboard__p--previous {
+  color: hsl(0deg, 0%, 100%);
+  margin-top: 0.8rem;
+}
+.dashboard__bg--play {
+  background-color: hsl(195deg, 74%, 62%);
+}
+.dashboard__bg--study {
+  background-color: hsl(348deg, 100%, 68%);
+}
+.dashboard__bg--exercise {
+  background-color: hsl(145deg, 58%, 55%);
+}
+.dashboard__bg--social {
+  background-color: hsl(264deg, 64%, 52%);
+}
+.dashboard__bg--self {
+  background-color: hsl(43deg, 84%, 65%);
+}
+
+/*# sourceMappingURL=style.css.map */

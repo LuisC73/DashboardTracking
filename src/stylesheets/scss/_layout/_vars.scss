@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
+$green:  hsl(145, 58%, 55%);
+$violet: hsl(264, 64%, 52%);
+$orange: hsl(43, 84%, 65%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0,0%,0%);
+$font: 'Rubik', sans-serif;
+$text: hsl(237, 18%, 59%);
+
+$reds:(
+    "work" : hsl(15, 100%, 70%),
+    "study" : hsl(348, 100%, 68%),
+);
+
+$blues:(
+    "play" : hsl(195, 74%, 62%),
+    "dark" : hsl(235, 46%, 20%),
+    "veryDark" : hsl(224, 46%, 9%),
+    "desaturated" :hsl(235, 45%, 61%),
+    "pale" : hsl(236, 100%, 87%),
+    "blue" : hsl(246, 80%, 60%)
+);
