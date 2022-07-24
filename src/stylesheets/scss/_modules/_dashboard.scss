@@ -166,4 +166,10 @@
     cursor: pointer;
    }
 
+   &__data{
+    @include mixin.flex(space-evenly,flex-start,column);
+
+    @include mixin.mediaMovil(){ @include mixin.flex(space-between,center,row);}
+   }
+
 }
